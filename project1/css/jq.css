@@ -1,0 +1,63 @@
+.important {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.blue {
+    
+	
+	width:80px;height:80px;display:none;background-color:blue;
+	 text-align:center;
+}
+
+#mainDiv {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+body{
+	background-color:red;
+}
+ 
+ #picDiv {
+    background-color yellow;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+ #moretext {
+	 
+	 color:white;
+	  padding:10px;
+	 text-align:center;
+ }
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;
+}
+#section {
+    width:1050px;
+    float:left;
+    padding:30px;
+	background-color:grey;
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:35px;
+}
