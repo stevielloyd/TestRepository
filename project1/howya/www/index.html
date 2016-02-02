@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css" /><!-- css file that came with demo,,,,below are all the links to jquery and custom themes-->
+		
+		      <link rel="stylesheet" href="css/themes/MyTheme1.min.css" />  <!--this may change depending on your theme name-->
+              <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+              <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+              <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+              <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>      <!--everything in the body can be altered except for the scripts at the bottom-->
+         
+		
+		    <div data-role="page" id="pageone">
+			
+  <div data-role="panel" id="overlayPanel" data-display="overlay"> 
+    <h2>Overlay Panel</h2>
+    <ul data-role="listview">
+  <li><a href="#">Default is right arrow</a></li>
+  <li data-icon="plus"><a href="#page2"data-transition="slide">Fill out form"</a></li>
+  <li data-icon="minus"><a href="#">data-icon="minus"</a></li>
+  <li data-icon="delete"><a href="#">data-icon="delete"</a></li>
+  <li data-icon="location"><a href="#">data-icon="location"</a></li>
+  <li data-icon="false"><a href="#">data-icon="false"</a></li>
+</ul>
+    <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div> 
+  <div data-role="panel" id="revealPanel" data-display="reveal"> 
+    <h2>Reveal Panel</h2>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
+    <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div> 
+   <div data-role="panel" id="pushPanel" data-display="push"> 
+    <h2>Push Panel</h2>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
+    <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div> 
+
+  <div data-role="header">
+    <h1>Page Header</h1>
+  </div>
+
+  <div style="height: 500px; " data-role="main" class="ui-content">
+  <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+			
+   <center>  <p>Click panels for different display modes.</p>
+    <a href="#overlayPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Overlay Panel</a>
+     <a href="#revealPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Reveal Panel</a>
+      <a href="#pushPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Push Panel</a></center>
+  </div>
+
+  <div data-role="footer">
+    <h1>Page Footer</h1>
+  </div> 
+</div> 
+
+
+<!--page 2-->
+
+<div data-role="page"id ="page2">
+
+  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <form action="welcome.php" method="post">
+Name: <input type="text" name="name"><br>
+E-mail: <input type="text" name="email"><br>
+<input type="submit" value="submit">
+</form>
+
+    <p>The "ui-field-contain" class style labels and form controls properly based upon the width of the page. When the width of the page is greater than 480px, it automatically place the label on the same line as the form control.</p>
+
+    <p>When the page is less than 480px, the label will be placed above the form element, and a thin bottom border will be added below the form element. Try to resize the width of the window to see the effect.</p> 
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+
+</div>
+		
+		
+         <script type="text/javascript" src="cordova.js"></script><!--  these next two scripts are to be included also-->
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
